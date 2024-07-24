@@ -1,1 +1,1 @@
-#ripple 기술 검토
+# ripple 기술 검토
