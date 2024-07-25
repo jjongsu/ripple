@@ -11,7 +11,7 @@ export default function Router() {
                 <Route path='/1' element={<Ripple1Page />} />
                 <Route path='/2' element={<Ripple2Page />} />
 
-                <Route path='/*' element={<div className='bg-black'>메인</div>} />
+                <Route path='*' element={<div className='bg-black'>메인</div>} />
             </Routes>
         </BrowserRouter>
     );
