@@ -6,7 +6,7 @@ const Ripple2Page = lazy(() => import('@pages/ripple2'));
 
 export default function Router() {
     return (
-        <BrowserRouter basename={'/ripple'}>
+        <BrowserRouter basename={'/ripple/'}>
             <Routes>
                 <Route path='/1' element={<Ripple1Page />} />
                 <Route path='/2' element={<Ripple2Page />} />
