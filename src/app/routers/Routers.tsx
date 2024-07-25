@@ -1,4 +1,5 @@
-import { lazy } from 'react';
+import Loading from '@shared/loading';
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, Outlet, RouteObject, RouterProvider } from 'react-router-dom';
 
 const Ripple1Page = lazy(() => import('@pages/ripple1'));
@@ -24,5 +25,9 @@ export default function Router() {
 
     const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL });
 
-    return <RouterProvider router={router} />;
+    return (
+        <Suspense fallback={<Loading />}>
+            <RouterProvider router={router} />
+        </Suspense>
+    );
 }
